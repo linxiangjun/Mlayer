@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html {
+      box-sizing: border-box; 
+    } 
+    *, *:before, 
+    *:after { box-sizing: inherit; }
+    
+    h1 {
+      margin: 0 0 20px 0;
+      text-align: center;
+    }
+    .layer-list {
+      width:100%;
+      padding: 20px;
+    }
+    .layer-list__btn {
+      margin-top: 20px;
+      margin-left: 10%;
+      width: 80%;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      color: #FFF;
+      background-color: #495060;
+    }
+  </style>
+</head>
+<body>
+  <div class="layer-list">
+    <h1>Mlayer</h1>
+    <button class="layer-list__btn" type="button">弹 窗</button>
+    <button class="layer-list__btn" type="button">消 息</button>
+    <button class="layer-list__btn" type="button">确 定</button>
+    <button class="layer-list__btn" type="button">广 告</button>
+    <button class="layer-list__btn" type="button">加 载</button>
+  </div>
+
+  <script src="Mlayer.js"></script>
+  <script>
+    var l = new Mlayer();
+    
+    var btn1 = document.querySelectorAll('.layer-list__btn')[0];
+    var btn2 = document.querySelectorAll('.layer-list__btn')[1];
+    var btn3 = document.querySelectorAll('.layer-list__btn')[2];
+    var btn4 = document.querySelectorAll('.layer-list__btn')[3];
+    var btn5 = document.querySelectorAll('.layer-list__btn')[4];
+
+    btn1.addEventListener('click', function() { l.info(); });
+    btn2.addEventListener('click', function() { l.msg(); });
+    btn3.addEventListener('click', function() { l.confirm(); });
+ btn4.addEventListener('click', function() { l.adv('default/adv.jpg'); });
+    btn5.addEventListener('click', function() { l.loading(); });
+
+  </script>
+</body>
+</html>
