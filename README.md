@@ -4,6 +4,14 @@
 
 ## 使用方法
 
+**commonjs**
+
+`require('Mlayer')`
+
+或者
+
+`<script src="Mlayer"></script>`
+
 初始化对象
 
 `var layer = new Slayer;`

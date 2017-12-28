@@ -1,8 +1,7 @@
 /* 
- * Author: LXJ
- * Date: 2017.12.19
- * Version: 1.0
- * License: LGPL
+ * Mlayer 1.0
+ * (c) 2017 LXJ
+ * @License: LGPL
 */
 
 ; !function (win) {
@@ -339,5 +338,10 @@
     return ret
   }
 
-  window.Mlayer = Layer;
+  // commonjs
+  if( typeof exports !== "undefined" ){
+    exports.Mlayer = Layer;
+  } else {
+    window.Mlayer = Layer;
+  }
 })(window, layer);
